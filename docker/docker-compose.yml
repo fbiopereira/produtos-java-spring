@@ -1,0 +1,48 @@
+version: "3.7"
+
+services:
+  application:
+    container_name: produtos-rest-grpc-app
+    image: produtos-rest-grpc-app
+    restart: always
+    build: .
+    environment:
+      MONGO_DB_HOST: produtos-rest-grpc-mongo-1
+      MONGO_DB_PORT: 27017
+      MONGO_DB_USER: "user"
+      MONGO_DB_PWD: "pwd"
+      MONGO_DB_DATABASE: Loja-Demo
+      ENV: LOCAL_DOCKER_COMPOSE
+    ports:
+      - "5001:5001"
+      - "5002:5002"
+    networks:
+      - "fbiopereira"
+
+
+  prometheus:
+    image: bitnami/prometheus:2.32.1
+    restart: on-failure
+    container_name: prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - "fbiopereira"
+
+
+  grafana:
+    image: grafana/grafana:8.3.3
+    restart: on-failure
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "prometheus"
+    networks:
+      - "fbiopereira"
+
+networks:
+  fbiopereira:
+    driver: bridge
