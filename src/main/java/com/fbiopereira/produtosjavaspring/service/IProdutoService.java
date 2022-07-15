@@ -1,7 +1,7 @@
 package com.fbiopereira.produtosjavaspring.service;
 
-import br.com.fbiopereira.produtosrestgrpc.domain.Produto;
-import br.com.fbiopereira.produtosrestgrpc.dto.produto.ProdutoRespostaDto;
+import com.fbiopereira.produtosjavaspring.domain.Produto;
+import com.fbiopereira.produtosjavaspring.dto.produto.ProdutoRespostaDto;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
 package com.fbiopereira.produtosjavaspring.service;
 
-import br.com.fbiopereira.produtosrestgrpc.domain.Produto;
-import br.com.fbiopereira.produtosrestgrpc.dto.produto.ProdutoRespostaDto;
-import br.com.fbiopereira.produtosrestgrpc.entity.ProdutoEntity;
-import br.com.fbiopereira.produtosrestgrpc.repository.IProdutoRepository;
+import com.fbiopereira.produtosjavaspring.domain.Produto;
+import com.fbiopereira.produtosjavaspring.dto.produto.ProdutoRespostaDto;
+import com.fbiopereira.produtosjavaspring.entity.ProdutoEntity;
+import com.fbiopereira.produtosjavaspring.repository.IProdutoRepository;
 import io.micrometer.core.annotation.Timed;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;

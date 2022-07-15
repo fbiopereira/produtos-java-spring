@@ -13,7 +13,7 @@ public class OpenApiConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .components(new Components())
-                .info(new Info().title("API para testes diversos").description(
-                        "API criada em Spring Boot para exemplicar diversas features e práticas de observabilidade."));
+                .info(new Info().title("API de cadastro de produtos para testes diversos").description(
+                        "API criada em Spring Boot para exemplicar diversas algumas possibilidades do spring."));
     }
 }
