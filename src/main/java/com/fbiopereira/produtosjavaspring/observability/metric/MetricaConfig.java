@@ -14,7 +14,7 @@ public class MetricaConfig {
 
     @Bean
     MeterRegistryCustomizer<MeterRegistry> metricsCommonTags() {
-        return registry -> registry.config().commonTags("fbiopereira", "produtos-rest-grpc");
+        return registry -> registry.config().commonTags("fbiopereira", "produtos-java-spring");
     }
 
     @Bean

@@ -2,12 +2,12 @@ version: "3.7"
 
 services:
   application:
-    container_name: produtos-rest-grpc-app
-    image: produtos-rest-grpc-app
+    container_name: produtos-java-spring
+    image: produtos-java-spring
     restart: always
-    build: .
+    build: ..
     environment:
-      MONGO_DB_HOST: produtos-rest-grpc-mongo-1
+      MONGO_DB_HOST: mongo
       MONGO_DB_PORT: 27017
       MONGO_DB_USER: "user"
       MONGO_DB_PWD: "pwd"
@@ -27,7 +27,7 @@ services:
     ports:
       - "9090:9090"
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ../prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
     networks:
       - "fbiopereira"
 

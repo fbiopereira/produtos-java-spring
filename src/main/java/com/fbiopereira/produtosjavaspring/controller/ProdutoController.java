@@ -1,11 +1,11 @@
-package com.fbiopereira.produtosjavaspring.controller.rest;
+package com.fbiopereira.produtosjavaspring.controller;
 
-import br.com.fbiopereira.produtosrestgrpc.domain.Produto;
-import br.com.fbiopereira.produtosrestgrpc.dto.produto.ProdutoEntradaDto;
-import br.com.fbiopereira.produtosrestgrpc.dto.produto.ProdutoRespostaDto;
-import br.com.fbiopereira.produtosrestgrpc.dto.produto.RespostaRestListaProdutoDto;
-import br.com.fbiopereira.produtosrestgrpc.dto.resposta.RespostaRestGenericaDto;
-import br.com.fbiopereira.produtosrestgrpc.service.ProdutoServiceRest;
+import com.fbiopereira.produtosjavaspring.domain.Produto;
+import com.fbiopereira.produtosjavaspring.dto.produto.ProdutoEntradaDto;
+import com.fbiopereira.produtosjavaspring.dto.produto.ProdutoRespostaDto;
+import com.fbiopereira.produtosjavaspring.dto.produto.RespostaRestListaProdutoDto;
+import com.fbiopereira.produtosjavaspring.dto.resposta.RespostaRestGenericaDto;
+import com.fbiopereira.produtosjavaspring.service.ProdutoServiceRest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
